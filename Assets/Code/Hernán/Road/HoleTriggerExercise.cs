@@ -3,8 +3,6 @@ using System.Collections;
 
 public class HoleTriggerExercise : MonoBehaviour
 {
-    [SerializeField] int _exerciseId;
-
     ExerciseHandler _exerciseHandler;
     FormulaHandler _formulaHandler;
     Character _character;
@@ -13,7 +11,7 @@ public class HoleTriggerExercise : MonoBehaviour
     HoleTriggerHammer _holeTriggerHammer;
     TriangleCanvas _triangleCanvas;
     bool _triggerEnabled;
-    bool _testMode = true;
+    bool _testMode = false;
 
     private void Awake() 
     {
@@ -54,7 +52,7 @@ public class HoleTriggerExercise : MonoBehaviour
 
         if (_testMode)
         {
-            print("ejercicio " + _exerciseId);
+            _exerciseHandler.SetCurrentExercise();
             _holeTriggerHammer.EnableTouch();
             yield break;
         }
@@ -70,7 +68,7 @@ public class HoleTriggerExercise : MonoBehaviour
         _triangleCanvas.GetComponent<Canvas>().worldCamera = FindObjectOfType<Camera>();
         _triangleCanvas.GetComponent<Canvas>().enabled = true;
 
-        _exerciseHandler.SetCurrentExercise(_exerciseId);
+        _exerciseHandler.SetCurrentExercise();
 
         _formulaHandler = FindObjectOfType<FormulaHandler>();
         _formulaHandler.CompletedEquationSteps += OnTriangleCompleted;
@@ -82,11 +80,6 @@ public class HoleTriggerExercise : MonoBehaviour
     }
     IEnumerator OnTriangleCompletedC()
     {
-        if (_exerciseHandler.CurrentExercise.id != _exerciseId)
-        {
-            yield break;
-        }
-
         while (StarPoints.IncreasingShine)
         {
             yield return null;

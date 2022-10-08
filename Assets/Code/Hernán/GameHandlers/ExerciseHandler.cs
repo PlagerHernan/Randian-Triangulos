@@ -10,6 +10,7 @@ public class ExerciseHandler : MonoBehaviour
     public static event VoidDelegate ReadExercises;
     static Dictionary<int,Exercise> _exercises; public static Dictionary<int, Exercise> Exercises { get => _exercises; }
     Exercise _currentExercise; public Exercise CurrentExercise { get => _currentExercise; }
+    int _exerciseCount;
 
     [SerializeField] string _csvName;
 
@@ -62,10 +63,11 @@ public class ExerciseHandler : MonoBehaviour
         ReadExercises?.Invoke();
     }
 
-    public void SetCurrentExercise(int id)
+    public void SetCurrentExercise()
     {
-        _currentExercise = _exercises[id];
+        _currentExercise = _exercises[_exerciseCount];
         EstablishedCurrentExercise?.Invoke(); 
+        _exerciseCount++;
     }
 }
 
