@@ -10,20 +10,33 @@ public class HoleTriggerExercise : MonoBehaviour
     Character _character;
     Background[] _background; 
 
-    HoleTriggerHammer _triangleTriggerHammer;
+    HoleTriggerHammer _holeTriggerHammer;
     TriangleCanvas _triangleCanvas;
+    bool _triggerEnabled;
 
     private void Awake() 
     {
         _exerciseHandler = FindObjectOfType<ExerciseHandler>(); 
         _character = FindObjectOfType<Character>();
         _background = FindObjectsOfType<Background>();
-        _triangleTriggerHammer = transform.parent.GetComponentInChildren<HoleTriggerHammer>();
+        _holeTriggerHammer = transform.parent.GetComponentInChildren<HoleTriggerHammer>();
+
+        LevelHandler.StartingLevel += EnableTrigger;
+    }
+
+    void EnableTrigger()
+    {
+        _triggerEnabled = true;
+    }
+
+    void DisableTrigger()
+    {
+        _triggerEnabled = false;
     }
 
     void OnTriggerEnter2D(Collider2D other) 
     {
-        if (other.GetComponent<Character>() != null)
+        if (_triggerEnabled && other.GetComponent<Character>() != null)
         {
             StartCoroutine("OnTriangleEnter");
         }    
@@ -82,7 +95,7 @@ public class HoleTriggerExercise : MonoBehaviour
             yield return null;
         }
 
-        _triangleTriggerHammer.EnableTouch();
+        _holeTriggerHammer.EnableTouch();
     }
 
     public void OnTriangleExit()
@@ -98,6 +111,6 @@ public class HoleTriggerExercise : MonoBehaviour
         //habilita movimiento personaje
         _character.ResumeMovement();
 
-        Destroy(gameObject);
+        DisableTrigger();
     }
 }

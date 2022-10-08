@@ -13,9 +13,9 @@ public class FormulaStage : MonoBehaviour
 
     public void SetWin()
     {
-        if (_triangle != null)
+        /* if (_triangle != null)
             _triangle.TouchEnabled = true;
 
-        gameObject.SetActive(false);
+        gameObject.SetActive(false); */
     }
 }

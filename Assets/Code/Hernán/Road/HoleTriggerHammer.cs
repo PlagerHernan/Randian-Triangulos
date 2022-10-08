@@ -4,11 +4,10 @@ using UnityEngine.Tilemaps;
 public class HoleTriggerHammer : MonoBehaviour
 {
     Character _character; 
-
-    HoleTriggerExercise _holeTrigger;
+    HoleTriggerExercise _holeTriggerExercise;
 
     Tilemap _tilemap;
-    bool _touchEnabled; public bool TouchEnabled { get => _touchEnabled; set => _touchEnabled = value; }
+    bool _touchEnabled;
     float _alpha = 0f;
     [SerializeField] ConstructionSmoke _constructionSmokePrefab;
     int _touchCount;
@@ -16,26 +15,25 @@ public class HoleTriggerHammer : MonoBehaviour
     private void Awake() 
     {
         _character = FindObjectOfType<Character>();
-        
-        _holeTrigger = GetComponentInParent<Tilemap>().gameObject.GetComponentInChildren<HoleTriggerExercise>();
+        _tilemap = GetComponentInParent<Tilemap>();
+        _holeTriggerExercise = _tilemap.gameObject.GetComponentInChildren<HoleTriggerExercise>();
 
-        /* _enableTouch = false;
-
-        if(_trigger == null)
-            _trigger = GetComponentInChildren<HoleTrigger>();
-
-        _color = GetComponent<SpriteRenderer>().color;
-        //empieza con un sexto de opacidad
-        _color.a = 0.17f; */
+        LevelHandler.StartingLevel += SetInitialHoleOpacity;
     }
 
-    private void Start() {
-        _tilemap = GetComponentInParent<Tilemap>();
+    void SetInitialHoleOpacity()
+    {
+        _tilemap.color = new Color(_tilemap.color.r, _tilemap.color.g, _tilemap.color.b, 0f);
     }
 
     public void EnableTouch()
     {
         _touchEnabled = true;
+    }
+
+    void DisableTouch()
+    {
+        _touchEnabled = false;
     }
 
     void OnMouseDown() 
@@ -54,7 +52,6 @@ public class HoleTriggerHammer : MonoBehaviour
 
         //cada click o tap le agrega un sexto de opacidad
         _alpha += 0.17f;
-        //GetComponent<SpriteRenderer>().color = _tilemapColor;
         _tilemap.color = new Color(_tilemap.color.r, _tilemap.color.g, _tilemap.color.b, _alpha);
 
         _touchCount++;
@@ -67,8 +64,8 @@ public class HoleTriggerHammer : MonoBehaviour
         if (_alpha > 1f)
         {
             StarParticle.Create();
-            _holeTrigger.OnTriangleExit();
-            Destroy(gameObject);
+            _holeTriggerExercise.OnTriangleExit();
+            DisableTouch();
         }
     }
 }
