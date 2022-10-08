@@ -1,0 +1,96 @@
+{
+    "triangleTypes": [
+        {
+            "index": 1,
+            "sideImages": [
+                {
+                    "xPosition": -169.6999969482422,
+                    "yPosition": 16.600000381469728
+                },
+                {
+                    "xPosition": 168.5,
+                    "yPosition": 17.200000762939454
+                },
+                {
+                    "xPosition": 14.0,
+                    "yPosition": -206.10000610351563
+                }
+            ],
+            "ruler": {
+                "xPosition": 16.5,
+                "yPosition": 12.199999809265137,
+                "rotation": 0.0,
+                "shortRuler": false
+            }
+        },
+        {
+            "index": 2,
+            "sideImages": [
+                {
+                    "xPosition": -144.0,
+                    "yPosition": 6.0
+                },
+                {
+                    "xPosition": 149.0,
+                    "yPosition": 3.0
+                },
+                {
+                    "xPosition": 14.0,
+                    "yPosition": -230.0
+                }
+            ],
+            "ruler": {
+                "xPosition": 67.0,
+                "yPosition": -33.0,
+                "rotation": 44.999996185302737,
+                "shortRuler": false
+            }
+        },
+        {
+            "index": 3,
+            "sideImages": [
+                {
+                    "xPosition": -95.4000015258789,
+                    "yPosition": 20.200000762939454
+                },
+                {
+                    "xPosition": 251.0,
+                    "yPosition": -14.0
+                },
+                {
+                    "xPosition": 14.0,
+                    "yPosition": -230.0
+                }
+            ],
+            "ruler": {
+                "xPosition": 67.0,
+                "yPosition": -33.0,
+                "rotation": 44.999996185302737,
+                "shortRuler": false
+            }
+        },
+        {
+            "index": 7,
+            "sideImages": [
+                {
+                    "xPosition": -130.0,
+                    "yPosition": 25.0
+                },
+                {
+                    "xPosition": 72.0,
+                    "yPosition": 192.0
+                },
+                {
+                    "xPosition": 80.0,
+                    "yPosition": -30.0
+                }
+            ],
+            "ruler": {
+                "xPosition": 10.0,
+                "yPosition": 115.0,
+                "rotation": 62.79999923706055,
+                "shortRuler": true
+            }
+        }
+    ]
+}

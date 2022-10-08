@@ -1,0 +1,776 @@
+fileFormatVersion: 2
+guid: 48442f4e6c7b2604dabbcf71aaf57cdc
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 345255829361251424
+    second: Arya_walkcycle_TRI_0
+  - first:
+      213: 8417542538506684288
+    second: Arya_walkcycle_TRI_1
+  - first:
+      213: 1588810863874203484
+    second: Arya_walkcycle_TRI_2
+  - first:
+      213: -1154297646958369242
+    second: Arya_walkcycle_TRI_3
+  - first:
+      213: -3986007512525582525
+    second: Arya_walkcycle_TRI_4
+  - first:
+      213: 8066415234005890764
+    second: Arya_walkcycle_TRI_5
+  - first:
+      213: -2772040342863315517
+    second: Arya_walkcycle_TRI_6
+  - first:
+      213: 6413841038220557823
+    second: Arya_walkcycle_TRI_7
+  - first:
+      213: 522621360032943111
+    second: Arya_walkcycle_TRI_8
+  - first:
+      213: -4189534327396667570
+    second: Arya_walkcycle_TRI_9
+  - first:
+      213: 7321717568892505643
+    second: Arya_walkcycle_TRI_10
+  - first:
+      213: -4226744936138797708
+    second: Arya_walkcycle_TRI_11
+  - first:
+      213: -3586030869625322086
+    second: Arya_walkcycle_TRI_12
+  - first:
+      213: 8063936132122640997
+    second: Arya_walkcycle_TRI_13
+  - first:
+      213: 569791996322230451
+    second: Arya_walkcycle_TRI_14
+  - first:
+      213: 740949376178339895
+    second: Arya_walkcycle_TRI_15
+  - first:
+      213: -903548716069787358
+    second: Arya_walkcycle_TRI_16
+  - first:
+      213: -5033314207867227808
+    second: Arya_walkcycle_TRI_17
+  - first:
+      213: -8172016037238313111
+    second: Arya_walkcycle_TRI_18
+  - first:
+      213: -333647431164603636
+    second: Arya_walkcycle_TRI_19
+  - first:
+      213: 5242602029666828672
+    second: Arya_walkcycle_TRI_20
+  - first:
+      213: -8592471250400488393
+    second: Arya_walkcycle_TRI_21
+  - first:
+      213: -2304225947737655248
+    second: Arya_walkcycle_TRI_22
+  - first:
+      213: -3977593672199574046
+    second: Arya_walkcycle_TRI_23
+  - first:
+      213: -583744069442332011
+    second: Arya_walkcycle_TRI_0
+  - first:
+      213: 8564182158008377714
+    second: Arya_walkcycle_TRI_1
+  - first:
+      213: -3698853539443301076
+    second: Arya_walkcycle_TRI_2
+  - first:
+      213: -7256752682872627539
+    second: Arya_walkcycle_TRI_3
+  - first:
+      213: 2370735692894360547
+    second: Arya_walkcycle_TRI_4
+  - first:
+      213: -2157658205441472843
+    second: Arya_walkcycle_TRI_5
+  - first:
+      213: 3970980832919462824
+    second: Arya_walkcycle_TRI_6
+  - first:
+      213: 3960556879162308687
+    second: Arya_walkcycle_TRI_7
+  - first:
+      213: 2727928166511181539
+    second: Arya_walkcycle_TRI_8
+  - first:
+      213: 2725478685093929320
+    second: Arya_walkcycle_TRI_9
+  - first:
+      213: -4942767068627944408
+    second: Arya_walkcycle_TRI_10
+  - first:
+      213: 5673574181505454462
+    second: Arya_walkcycle_TRI_11
+  - first:
+      213: 3091766573123957907
+    second: Arya_walkcycle_TRI_12
+  - first:
+      213: -1350078634349147008
+    second: Arya_walkcycle_TRI_13
+  - first:
+      213: 794478961656906653
+    second: Arya_walkcycle_TRI_14
+  - first:
+      213: -2275258444826413601
+    second: Arya_walkcycle_TRI_15
+  - first:
+      213: -8897510937244099728
+    second: Arya_walkcycle_TRI_16
+  - first:
+      213: -162655786202110073
+    second: Arya_walkcycle_TRI_17
+  - first:
+      213: 3292692358025632096
+    second: Arya_walkcycle_TRI_18
+  - first:
+      213: 2598178881083693571
+    second: Arya_walkcycle_TRI_19
+  - first:
+      213: -5971644618700457223
+    second: Arya_walkcycle_TRI_20
+  - first:
+      213: 2065293948822468489
+    second: Arya_walkcycle_TRI_21
+  - first:
+      213: 4279290803380133442
+    second: Arya_walkcycle_TRI_22
+  - first:
+      213: -2608421165012839449
+    second: Arya_walkcycle_TRI_23
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 300
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Arya_walkcycle_TRI_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2560
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59a16259cdf16e7f0800000000000000
+      internalID: -583744069442332011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arya_walkcycle_TRI_1
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 2560
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 271e3d73c461ad670800000000000000
+      internalID: 8564182158008377714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arya_walkcycle_TRI_2
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 2560
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c252941ad480bacc0800000000000000
+      internalID: -3698853539443301076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arya_walkcycle_TRI_3
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 2560
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dae938202e5da4b90800000000000000
+      internalID: -7256752682872627539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arya_walkcycle_TRI_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2048
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e3de4f4d8b86e020800000000000000
+      internalID: 2370735692894360547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arya_walkcycle_TRI_5
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 2048
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b644fd3b457e02e0800000000000000
+      internalID: -2157658205441472843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arya_walkcycle_TRI_6
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 2048
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a3ac044702cb1730800000000000000
+      internalID: 3970980832919462824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arya_walkcycle_TRI_7
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 2048
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f48f2376f79b6f630800000000000000
+      internalID: 3960556879162308687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arya_walkcycle_TRI_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1536
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ee7ea9d63c8bd520800000000000000
+      internalID: 2727928166511181539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arya_walkcycle_TRI_9
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1536
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8612ce38c68d2d520800000000000000
+      internalID: 2725478685093929320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arya_walkcycle_TRI_10
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1536
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82cbeeaf983c76bb0800000000000000
+      internalID: -4942767068627944408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arya_walkcycle_TRI_11
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1536
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e71d57f78a59cbe40800000000000000
+      internalID: 5673574181505454462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arya_walkcycle_TRI_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1024
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 394fa7f315928ea20800000000000000
+      internalID: 3091766573123957907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arya_walkcycle_TRI_13
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1024
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08c46c492ae834de0800000000000000
+      internalID: -1350078634349147008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arya_walkcycle_TRI_14
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1024
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d93c413086e860b00800000000000000
+      internalID: 794478961656906653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arya_walkcycle_TRI_15
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1024
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd5f9efcf78ac60e0800000000000000
+      internalID: -2275258444826413601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arya_walkcycle_TRI_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 512
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07b996091f0b58480800000000000000
+      internalID: -8897510937244099728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arya_walkcycle_TRI_17
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 512
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 787e2ca9c612ebdf0800000000000000
+      internalID: -162655786202110073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arya_walkcycle_TRI_18
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 512
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 069d2c2114ef1bd20800000000000000
+      internalID: 3292692358025632096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arya_walkcycle_TRI_19
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 512
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30a5ae53de59e0420800000000000000
+      internalID: 2598178881083693571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arya_walkcycle_TRI_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fa7c71cbd4702da0800000000000000
+      internalID: -5971644618700457223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arya_walkcycle_TRI_21
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 987b35077e569ac10800000000000000
+      internalID: 2065293948822468489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arya_walkcycle_TRI_22
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 0
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24e91122058136b30800000000000000
+      internalID: 4279290803380133442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arya_walkcycle_TRI_23
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 0
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e39cca35c60dcbd0800000000000000
+      internalID: -2608421165012839449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 342661c804431064787ee812715b98f1
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
