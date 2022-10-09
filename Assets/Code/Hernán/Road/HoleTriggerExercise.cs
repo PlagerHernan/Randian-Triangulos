@@ -8,7 +8,6 @@ public class HoleTriggerExercise : MonoBehaviour
     Background[] _background; 
 
     HoleTriggerHammer _holeTriggerHammer;
-    TriangleCanvas _triangleCanvas;
     bool _triggerEnabled;
 
     private void Awake() 
@@ -56,14 +55,7 @@ public class HoleTriggerExercise : MonoBehaviour
         
         yield return new WaitForSeconds(0.5f);
 
-        /* if (_triangleCanvas.gameObject != null)
-        {
-            _triangleCanvas.enabled = true;
-        } */
-
-        _triangleCanvas = TriangleCanvas.Create(ScoreHandler.Score);
-        _triangleCanvas.GetComponent<Canvas>().worldCamera = FindObjectOfType<Camera>();
-        _triangleCanvas.GetComponent<Canvas>().enabled = true;
+        TriangleCanvas.Show();
 
         ExerciseHandler.SetCurrentExercise();
 
@@ -82,8 +74,7 @@ public class HoleTriggerExercise : MonoBehaviour
             yield return null;
         }
         
-        _triangleCanvas.GetComponent<Canvas>().enabled = false;
-        _triangleCanvas = null; 
+        TriangleCanvas.Hide();
 
         HelpIinfo.Show(HelpIinfo.NextAction.hammer);
         HelpIinfo.FinishTutorial();

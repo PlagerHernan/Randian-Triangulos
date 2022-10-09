@@ -2,10 +2,11 @@
 
 public class TriangleCanvas : MonoBehaviour
 {
-    static Object prefab;
-    static GameObject _blockingCover;
+    //static Object prefab;
+    static Canvas _canvas;
+    static GameObject _blockingCover; 
 
-    public static TriangleCanvas Create(float StarPointsShine)
+    /* public static TriangleCanvas Create(float StarPointsShine)
     {
         //DestroyOldCanvas();
 
@@ -16,36 +17,30 @@ public class TriangleCanvas : MonoBehaviour
 
         TriangleCanvas triCanvasObject = newObject.GetComponent<TriangleCanvas>();
         return triCanvasObject;
-    }
+    } */
 
     void Awake() 
     {
+        _canvas = GetComponent<Canvas>();
         _blockingCover = transform.GetChild(transform.childCount-1).gameObject; 
     }
 
     void Start() 
     {
+        Hide();
         DeactivateBlockingCover();
 
-        Invoke("CallTutorial", 1f);
+        //Invoke("CallTutorial", 1f);
     }
 
-    static void DestroyOldCanvas()
+    public static void Show()
     {
-        /* TriangleCanvas[] canvas = FindObjectsOfType<TriangleCanvas>();    
-        foreach (TriangleCanvas canva in canvas)
-        {
-            if (canva != this)
-            {
-                Destroy(canva.gameObject);
-            }
-        } */
+        _canvas.enabled = true;
+    }
 
-        TriangleCanvas oldCanvas = FindObjectOfType<TriangleCanvas>();
-        if (oldCanvas != null)
-        {
-            Destroy(oldCanvas.gameObject);
-        }
+    public static void Hide()
+    {
+        _canvas.enabled = false;
     }
 
     public static void ActivateBlockingCover()
@@ -64,8 +59,17 @@ public class TriangleCanvas : MonoBehaviour
     }
 
     //llamado en Start()
-    void CallTutorial()
+    /* void CallTutorial()
     {
         HelpIinfo.Show(HelpIinfo.NextAction.chooseCorrectUnclearFormula);
-    }
+    } */
+
+    /* static void DestroyOldCanvas()
+    {
+        TriangleCanvas oldCanvas = FindObjectOfType<TriangleCanvas>();
+        if (oldCanvas != null)
+        {
+            Destroy(oldCanvas.gameObject);
+        }
+    } */
 }
