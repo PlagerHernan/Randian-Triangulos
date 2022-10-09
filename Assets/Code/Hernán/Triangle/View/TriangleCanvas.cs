@@ -55,6 +55,11 @@ public class TriangleCanvas : MonoBehaviour
 
     public static void DeactivateBlockingCover()
     {
+        if (GameManager.TestMode)
+        {
+            return;
+        }
+        
         _blockingCover.SetActive(false);
     }
 

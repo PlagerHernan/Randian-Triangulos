@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 public class TriangleData : MonoBehaviour
 {
-    Game _game;
+    GameManager _game;
     ExerciseHandler _exerciseHandler;
     FormulaTerms _formulaTerms;
     FormulaHandler _formulaHandler;
@@ -25,7 +25,7 @@ public class TriangleData : MonoBehaviour
 
     void Awake() 
     {
-        _game = FindObjectOfType<Game>();
+        _game = FindObjectOfType<GameManager>();
         _exerciseHandler = FindObjectOfType<ExerciseHandler>();
         _formulaTerms = FindObjectOfType<FormulaTerms>();
         _formulaHandler = FindObjectOfType<FormulaHandler>();

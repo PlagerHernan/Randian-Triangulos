@@ -372,13 +372,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11aebcc8a1894144183df7ab0eea5cf2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _exerciseId: 0
-  _exerciseHandler: {fileID: 0}
-  _formulaHandler: {fileID: 0}
-  _character: {fileID: 0}
-  _background: []
-  _triangleTriggerHammer: {fileID: 0}
-  _triangleCanvas: {fileID: 0}
 --- !u!61 &11473107
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1825,7 +1818,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dac5daea4ce52cd48b815898c79d5321, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _exerciseId: 103
 --- !u!61 &112586125
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2170,13 +2162,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11aebcc8a1894144183df7ab0eea5cf2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _exerciseId: 0
-  _exerciseHandler: {fileID: 0}
-  _formulaHandler: {fileID: 0}
-  _character: {fileID: 0}
-  _background: []
-  _triangleTriggerHammer: {fileID: 0}
-  _triangleCanvas: {fileID: 0}
 --- !u!61 &145279387
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6428,7 +6413,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dac5daea4ce52cd48b815898c79d5321, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _exerciseId: 102
 --- !u!1 &487457389
 GameObject:
   m_ObjectHideFlags: 0
@@ -12206,8 +12190,6 @@ Transform:
   - {fileID: 1208719561}
   - {fileID: 555724608}
   - {fileID: 1941126161}
-  - {fileID: 799646643}
-  - {fileID: 1317003361}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -12972,49 +12954,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &799646642
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 799646643}
-  - component: {fileID: 799646644}
-  m_Layer: 0
-  m_Name: LevelHandler
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &799646643
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 799646642}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 761793530}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &799646644
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 799646642}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 30df4464faccbdf4bb425804d9f32b7d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &800018527
 GameObject:
   m_ObjectHideFlags: 0
@@ -21473,7 +21412,7 @@ GameObject:
   - component: {fileID: 1208719561}
   - component: {fileID: 1208719560}
   m_Layer: 0
-  m_Name: Game
+  m_Name: GameManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -21488,11 +21427,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1208719559}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 368aad1454f458f46a65735fb41e7aff, type: 3}
+  m_Script: {fileID: 11500000, guid: 88792e02e5212f64392422f2176c723d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _pausePanel: {fileID: 243494281}
-  _resumeBtn: {fileID: 742782018}
 --- !u!4 &1208719561
 Transform:
   m_ObjectHideFlags: 0
@@ -23179,13 +23116,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11aebcc8a1894144183df7ab0eea5cf2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _exerciseId: 0
-  _exerciseHandler: {fileID: 0}
-  _formulaHandler: {fileID: 0}
-  _character: {fileID: 0}
-  _background: []
-  _triangleTriggerHammer: {fileID: 0}
-  _triangleCanvas: {fileID: 0}
 --- !u!61 &1281711878
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -23875,49 +23805,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 2
   m_SpriteSortPoint: 0
---- !u!1 &1317003360
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1317003361}
-  - component: {fileID: 1317003362}
-  m_Layer: 0
-  m_Name: ScoreHandler
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1317003361
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1317003360}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 761793530}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1317003362
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1317003360}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c3ed1953c9d1a7348bfaaf71d536b8d6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1319872026
 GameObject:
   m_ObjectHideFlags: 0
@@ -32483,13 +32370,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11aebcc8a1894144183df7ab0eea5cf2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _exerciseId: 0
-  _exerciseHandler: {fileID: 0}
-  _formulaHandler: {fileID: 0}
-  _character: {fileID: 0}
-  _background: []
-  _triangleTriggerHammer: {fileID: 0}
-  _triangleCanvas: {fileID: 0}
 --- !u!61 &1843188018
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -34879,7 +34759,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dac5daea4ce52cd48b815898c79d5321, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _exerciseId: 104
 --- !u!61 &1951048943
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -35131,13 +35010,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11aebcc8a1894144183df7ab0eea5cf2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _exerciseId: 0
-  _exerciseHandler: {fileID: 0}
-  _formulaHandler: {fileID: 0}
-  _character: {fileID: 0}
-  _background: []
-  _triangleTriggerHammer: {fileID: 0}
-  _triangleCanvas: {fileID: 0}
 --- !u!1 &1960022007
 GameObject:
   m_ObjectHideFlags: 0
@@ -37626,13 +37498,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11aebcc8a1894144183df7ab0eea5cf2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _exerciseId: 0
-  _exerciseHandler: {fileID: 0}
-  _formulaHandler: {fileID: 0}
-  _character: {fileID: 0}
-  _background: []
-  _triangleTriggerHammer: {fileID: 0}
-  _triangleCanvas: {fileID: 0}
 --- !u!61 &2113290279
 BoxCollider2D:
   m_ObjectHideFlags: 0

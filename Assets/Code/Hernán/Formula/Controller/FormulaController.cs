@@ -12,8 +12,8 @@ public class FormulaController : MonoBehaviour
         _formulaHandler = GetComponent<FormulaHandler>();
         _roll = GetComponentInChildren<Roll>();
 
-        Game.PausingGame += Disable;
-        Game.PlayingGame += Enable;
+        GameManager.PausingGame += Disable;
+        GameManager.PlayingGame += Enable;
         
         _formulaHandler.ChosenCorrectUnclearFormula += LockSides;  
         _formulaHandler.ChosenCorrectUnclearFormula += CallUnlockSides;

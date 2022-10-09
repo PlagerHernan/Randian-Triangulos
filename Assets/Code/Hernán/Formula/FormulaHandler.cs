@@ -6,7 +6,7 @@ using System.Linq;
 
 public class FormulaHandler : MonoBehaviour
 {
-    Game _game;
+    GameManager _game;
     ExerciseHandler _exerciseHandler;
     FormulaView _formulaView;
     UIPointsOfReference _UIPointsOfReference;
@@ -27,7 +27,7 @@ public class FormulaHandler : MonoBehaviour
 
     void Awake() 
     {
-        _game = FindObjectOfType<Game>();
+        _game = FindObjectOfType<GameManager>();
         _exerciseHandler = FindObjectOfType<ExerciseHandler>();
         _formulaView = GetComponentInChildren<FormulaView>();    
         _UIPointsOfReference = GetComponentInChildren<UIPointsOfReference>();

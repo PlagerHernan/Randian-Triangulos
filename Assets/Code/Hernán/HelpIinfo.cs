@@ -114,7 +114,7 @@ public class HelpIinfo : MonoBehaviour
     static void ShowPanel()
     {
         _thisGameObject.transform.GetChild(0).gameObject.SetActive(true);
-        Game.OnPausingGame();
+        GameManager.OnPausingGame();
     }
 
     void Hide()
@@ -125,7 +125,7 @@ public class HelpIinfo : MonoBehaviour
     //llamado desde botón
     public void Exit()
     {
-        Game.OnPlayingGame();
+        GameManager.OnPlayingGame();
         Hide();
     }
 

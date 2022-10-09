@@ -11,7 +11,6 @@ public class HoleTriggerExercise : MonoBehaviour
     HoleTriggerHammer _holeTriggerHammer;
     TriangleCanvas _triangleCanvas;
     bool _triggerEnabled;
-    bool _testMode = false;
 
     private void Awake() 
     {
@@ -50,7 +49,7 @@ public class HoleTriggerExercise : MonoBehaviour
         //deshabilita movimiento personaje
         _character.StopMovement();
 
-        if (_testMode)
+        if (GameManager.TestMode)
         {
             _exerciseHandler.SetCurrentExercise();
             _holeTriggerHammer.EnableTouch();
@@ -91,7 +90,7 @@ public class HoleTriggerExercise : MonoBehaviour
         HelpIinfo.Show(HelpIinfo.NextAction.hammer);
         HelpIinfo.FinishTutorial();
 
-        while (Game.IsGamePausing)
+        while (GameManager.IsGamePausing)
         {
             yield return null;
         }

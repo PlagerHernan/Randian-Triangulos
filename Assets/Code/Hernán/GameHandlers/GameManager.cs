@@ -1,39 +1,23 @@
 ﻿using UnityEngine;
-using UnityEngine.UI;
 
-public class Game : MonoBehaviour
+public class GameManager : MonoBehaviour
 {
     public delegate void VoidDelegate(); 
     public event VoidDelegate DecreasingHealth;
     public static event VoidDelegate PausingGame, PlayingGame;
-    [SerializeField] GameObject _pausePanel, _resumeBtn;
     static bool _isGamePausing; public static bool IsGamePausing { get => _isGamePausing; }
+    static bool _testMode = false; public static bool TestMode { get => _testMode; }
 
-    /* void Awake() 
+    void Awake() 
     {
-        _pausePanel.SetActive(false); 
-    } */
-
-    /* public void ShowPausePanel(string text)
-    {
-        Time.timeScale = 0f;
-        _pausePanel.GetComponentInChildren<Text>().text = text;
-        _pausePanel.SetActive(true);
-        if (text != "Pause")
+        if (!Application.isEditor)
         {
-            _resumeBtn.SetActive(false);   
+            _testMode = false;
         }
-        else
-        {
-            _resumeBtn.SetActive(true);
-        }
-    } */
 
-    /* public void Resume()
-    {
-        Time.timeScale = 1f;
-        _pausePanel.SetActive(false);
-    } */
+        new LevelHandler();
+        new ScoreHandler();    
+    }
 
     public void OnDecreasingHealth()
     {

@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 public class Health : MonoBehaviour
 {
-    Game _game;
+    GameManager _game;
 
     Image[] _children;
     Animator _animator;
@@ -13,7 +13,7 @@ public class Health : MonoBehaviour
 
     void Awake() 
     {
-        _game = FindObjectOfType<Game>();  
+        _game = FindObjectOfType<GameManager>();  
 
         _children = GetComponentsInChildren<Image>();  
         _animator = GetComponent<Animator>();

@@ -57,5 +57,8 @@ public class PlayButton : MonoBehaviour
     {
         LevelHandler.OnStartingLevel();
         GameOver.HidePanel();
+
+        AudioHandler.StopMusic();
+        AudioHandler.PlayMusic("MainTrack");
     }
 }

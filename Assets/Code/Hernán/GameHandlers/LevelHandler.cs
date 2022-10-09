@@ -1,13 +1,12 @@
-﻿using UnityEngine;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
-public class LevelHandler : MonoBehaviour
+public class LevelHandler
 {
     public delegate void VoidDelegate(); public static event VoidDelegate StartingLevel;
     static int _currentLevel; public static int CurrentLevel { get => _currentLevel; set => _currentLevel = value; }
     static int _maxLevel; public static int MaxLevel { get => _maxLevel; }
 
-    void Awake() 
+    public LevelHandler()
     {
         ExerciseHandler.ReadExercises += SetMaxLevel;
         ExerciseHandler.ReadExercises += OnStartingLevel;

@@ -1,16 +1,15 @@
-﻿using UnityEngine;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
-public class ScoreHandler: MonoBehaviour
+public class ScoreHandler
 {
     static int _totalLevelActions;
     static int _hitCounter;
     static float _score; public static float Score { get => _score; }
 
-    void Start() 
+    public ScoreHandler()
     {
         LevelHandler.StartingLevel += ResetScore;  
-        LevelHandler.StartingLevel += SetTotalLevelActions;    
+        LevelHandler.StartingLevel += SetTotalLevelActions;
     }
 
     void ResetScore()
