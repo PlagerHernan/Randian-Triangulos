@@ -10,11 +10,16 @@ public class GameManager : MonoBehaviour
     public event VoidDelegate DecreasingHealth;
     public static event VoidDelegate PausingGame, PlayingGame;
     static bool _isGamePausing; public static bool IsGamePausing { get => _isGamePausing; }
+    [SerializeField] bool _testModeAux;
     static bool _testMode = false; public static bool TestMode { get => _testMode; }
 
     void Awake() 
     {
-        if (!Application.isEditor)
+        if (Application.isEditor)
+        {
+            _testMode = _testModeAux;
+        }
+        else
         {
             _testMode = false;
         }

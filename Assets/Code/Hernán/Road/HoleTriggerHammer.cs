@@ -7,7 +7,7 @@ public class HoleTriggerHammer : MonoBehaviour
     HoleTriggerExercise _holeTriggerExercise;
 
     Tilemap _tilemap;
-    bool _touchEnabled;
+    bool _touchEnabled, _waitingForRebuild;
     float _alpha = 0f;
     [SerializeField] ConstructionSmoke _constructionSmokePrefab;
     int _touchCount;
@@ -38,8 +38,9 @@ public class HoleTriggerHammer : MonoBehaviour
 
     void OnMouseDown() 
     {
-        if (_touchEnabled)
+        if (_touchEnabled && !_waitingForRebuild)
         {
+            _waitingForRebuild = true;
             _character.Hammer();
             Invoke("RebuildTriangle", 0.5f);
         }
@@ -47,7 +48,7 @@ public class HoleTriggerHammer : MonoBehaviour
 
     //llamado en OnMouseDown()
     void RebuildTriangle()
-    {
+    {   
         Instantiate(_constructionSmokePrefab, _constructionSmokePrefab.Positions[_touchCount], new Quaternion());
 
         //cada click o tap le agrega un sexto de opacidad
@@ -67,5 +68,7 @@ public class HoleTriggerHammer : MonoBehaviour
             _holeTriggerExercise.OnTriangleExit();
             DisableTouch();
         }
+
+        _waitingForRebuild = false;
     }
 }
