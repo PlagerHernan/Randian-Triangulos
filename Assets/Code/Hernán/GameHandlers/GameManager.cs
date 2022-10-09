@@ -1,7 +1,11 @@
 ﻿using UnityEngine;
+using System.Threading;
+using System.Globalization;
 
 public class GameManager : MonoBehaviour
 {
+    ExerciseHandler _exerciseHandler;
+
     public delegate void VoidDelegate(); 
     public event VoidDelegate DecreasingHealth;
     public static event VoidDelegate PausingGame, PlayingGame;
@@ -15,8 +19,21 @@ public class GameManager : MonoBehaviour
             _testMode = false;
         }
 
+        _exerciseHandler = new ExerciseHandler();
         new LevelHandler();
         new ScoreHandler();    
+    }
+
+    void Start() 
+    {
+        SetCultureInfo();
+        _exerciseHandler.SetExercises();
+    }
+
+    void SetCultureInfo()
+    {
+        Thread.CurrentThread.CurrentCulture = new CultureInfo("es-AR");
+        Thread.CurrentThread.CurrentUICulture = new CultureInfo("es-AR");
     }
 
     public void OnDecreasingHealth()

@@ -1,43 +1,21 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
-using System.Globalization;
-using System.Threading;
 
-public class ExerciseHandler : MonoBehaviour
+public class ExerciseHandler
 {
     public delegate void VoidDelegate(); 
-    public event VoidDelegate EstablishedCurrentExercise;
-    public static event VoidDelegate ReadExercises;
+    public static event VoidDelegate ReadExercises, EstablishedCurrentExercise;
     static Dictionary<int,Exercise> _exercises; public static Dictionary<int, Exercise> Exercises { get => _exercises; }
-    Exercise _currentExercise; public Exercise CurrentExercise { get => _currentExercise; }
-    int _exerciseCount;
+    static Exercise _currentExercise; public static Exercise CurrentExercise { get => _currentExercise; }
+    static int _exerciseCount;
+    const string _csvName = "Test Plan - Problemas con triángulos - Ejercicios";
 
-    [SerializeField] string _csvName;
-
-    void Awake() 
+    public ExerciseHandler()
     {
         _exercises = new Dictionary<int, Exercise>(); 
     }
 
-    void Start()
-    {
-        SetCultureInfo();
-
-        SetExercises();
-
-        /* foreach (KeyValuePair<int, Exercise> exercise in _exercises)
-        {
-            print(exercise.Value.ToString());
-        } */
-    }
-
-    void SetCultureInfo()
-    {
-        Thread.CurrentThread.CurrentCulture = new CultureInfo("es-AR");
-        Thread.CurrentThread.CurrentUICulture = new CultureInfo("es-AR");
-    }
-
-    void SetExercises()
+    public void SetExercises()
     {
         TextAsset textFile = Resources.Load<TextAsset>(_csvName);
         string[,] grid = CSVReader.SplitCsvGrid(textFile.text);
@@ -61,9 +39,14 @@ public class ExerciseHandler : MonoBehaviour
 		}
 
         ReadExercises?.Invoke();
+
+        /* foreach (KeyValuePair<int, Exercise> exercise in _exercises)
+        {
+            print(exercise.Value.ToString());
+        } */
     }
 
-    public void SetCurrentExercise()
+    public static void SetCurrentExercise()
     {
         _currentExercise = _exercises[_exerciseCount];
         EstablishedCurrentExercise?.Invoke(); 

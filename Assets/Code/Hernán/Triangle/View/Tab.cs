@@ -4,8 +4,6 @@ using UnityEngine.EventSystems;
 
 public class Tab : MonoBehaviour, IPointerClickHandler
 {
-    ExerciseHandler _exerciseHandler;
-
     Image _image;
     RectTransform _rectTransform;
 
@@ -18,15 +16,13 @@ public class Tab : MonoBehaviour, IPointerClickHandler
 
     void Awake() 
     {
-        _exerciseHandler = FindObjectOfType<ExerciseHandler>();
-
         _image = GetComponent<Image>();  
         _rectTransform = GetComponent<RectTransform>();
 
         _pasiveColor = new Color(_image.color.r, _image.color.g, _image.color.b, 0.6f);
         _activeColor = Color.white;
 
-        _exerciseHandler.EstablishedCurrentExercise += SetLocked;
+        ExerciseHandler.EstablishedCurrentExercise += SetLocked;
     }
 
     void Start()
@@ -38,7 +34,7 @@ public class Tab : MonoBehaviour, IPointerClickHandler
     {
         if (_dataType == TriangleData.Type.Height || _dataType == TriangleData.Type.Area)
         {
-            if (_exerciseHandler.CurrentExercise.height.value == 0f)
+            if (ExerciseHandler.CurrentExercise.height.value == 0f)
             {
                 _locked = true;   
             }

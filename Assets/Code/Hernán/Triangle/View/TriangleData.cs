@@ -4,7 +4,6 @@ using UnityEngine.UI;
 public class TriangleData : MonoBehaviour
 {
     GameManager _game;
-    ExerciseHandler _exerciseHandler;
     FormulaTerms _formulaTerms;
     FormulaHandler _formulaHandler;
 
@@ -26,13 +25,12 @@ public class TriangleData : MonoBehaviour
     void Awake() 
     {
         _game = FindObjectOfType<GameManager>();
-        _exerciseHandler = FindObjectOfType<ExerciseHandler>();
         _formulaTerms = FindObjectOfType<FormulaTerms>();
         _formulaHandler = FindObjectOfType<FormulaHandler>();
 
         _textComponent = GetComponentInChildren<Text>();
 
-        _exerciseHandler.EstablishedCurrentExercise += SetData;
+        ExerciseHandler.EstablishedCurrentExercise += SetData;
 
         _formulaHandler.ChoosingVariable += ActivateButton;
 
@@ -75,12 +73,12 @@ public class TriangleData : MonoBehaviour
         }
         else if (type == Type.Height)
         {
-            _value = _exerciseHandler.CurrentExercise.height.value;
+            _value = ExerciseHandler.CurrentExercise.height.value;
             _textComponent.text = _value + " m";
         }
 
         //si el objetivo del ejercicio es este tipo de dato, el usuario no puede ver su valor
-        if (_exerciseHandler.CurrentExercise.clearFormulas[0].equation[0] == unknownVariable)
+        if (ExerciseHandler.CurrentExercise.clearFormulas[0].equation[0] == unknownVariable)
         {
             _textComponent.text = "?";
         }
@@ -99,7 +97,7 @@ public class TriangleData : MonoBehaviour
         
         for (int i = 0; i < 3; i++)
         {
-            perimeter += _exerciseHandler.CurrentExercise.sides[i].value;
+            perimeter += ExerciseHandler.CurrentExercise.sides[i].value;
         }
 
         return perimeter;
@@ -109,20 +107,20 @@ public class TriangleData : MonoBehaviour
     {
         float baseValue = 0f;
         
-        if (_exerciseHandler.CurrentExercise.height.baseSide == 'A')
+        if (ExerciseHandler.CurrentExercise.height.baseSide == 'A')
         {
-            baseValue = _exerciseHandler.CurrentExercise.sides[0].value;
+            baseValue = ExerciseHandler.CurrentExercise.sides[0].value;
         }
-        else if (_exerciseHandler.CurrentExercise.height.baseSide == 'B')
+        else if (ExerciseHandler.CurrentExercise.height.baseSide == 'B')
         {
-            baseValue = _exerciseHandler.CurrentExercise.sides[1].value;
+            baseValue = ExerciseHandler.CurrentExercise.sides[1].value;
         }
-        else if (_exerciseHandler.CurrentExercise.height.baseSide == 'C')
+        else if (ExerciseHandler.CurrentExercise.height.baseSide == 'C')
         {
-            baseValue = _exerciseHandler.CurrentExercise.sides[2].value;
+            baseValue = ExerciseHandler.CurrentExercise.sides[2].value;
         }
 
-        float area = (baseValue * _exerciseHandler.CurrentExercise.height.value) / 2;
+        float area = (baseValue * ExerciseHandler.CurrentExercise.height.value) / 2;
 
         return area;
     }

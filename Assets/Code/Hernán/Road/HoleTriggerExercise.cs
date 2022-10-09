@@ -3,7 +3,6 @@ using System.Collections;
 
 public class HoleTriggerExercise : MonoBehaviour
 {
-    ExerciseHandler _exerciseHandler;
     FormulaHandler _formulaHandler;
     Character _character;
     Background[] _background; 
@@ -14,7 +13,6 @@ public class HoleTriggerExercise : MonoBehaviour
 
     private void Awake() 
     {
-        _exerciseHandler = FindObjectOfType<ExerciseHandler>(); 
         _character = FindObjectOfType<Character>();
         _background = FindObjectsOfType<Background>();
         _holeTriggerHammer = transform.parent.GetComponentInChildren<HoleTriggerHammer>();
@@ -51,7 +49,7 @@ public class HoleTriggerExercise : MonoBehaviour
 
         if (GameManager.TestMode)
         {
-            _exerciseHandler.SetCurrentExercise();
+            ExerciseHandler.SetCurrentExercise();
             _holeTriggerHammer.EnableTouch();
             yield break;
         }
@@ -67,7 +65,7 @@ public class HoleTriggerExercise : MonoBehaviour
         _triangleCanvas.GetComponent<Canvas>().worldCamera = FindObjectOfType<Camera>();
         _triangleCanvas.GetComponent<Canvas>().enabled = true;
 
-        _exerciseHandler.SetCurrentExercise();
+        ExerciseHandler.SetCurrentExercise();
 
         _formulaHandler = FindObjectOfType<FormulaHandler>();
         _formulaHandler.CompletedEquationSteps += OnTriangleCompleted;

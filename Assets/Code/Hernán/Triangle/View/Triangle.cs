@@ -4,7 +4,6 @@ using UnityEngine.UI;
 
 public class Triangle : MonoBehaviour
 {
-    ExerciseHandler _exerciseHandler;
     FormulaHandler _formulaHandler;
 
     TriangleSide[] _triangleSides;
@@ -19,7 +18,6 @@ public class Triangle : MonoBehaviour
 
     void Awake() 
     {
-        _exerciseHandler = FindObjectOfType<ExerciseHandler>();
         _formulaHandler = GetComponentInParent<TriangleCanvas>().GetComponentInChildren<FormulaHandler>();
 
         _triangleSides = GetComponentsInChildren<TriangleSide>();
@@ -29,9 +27,9 @@ public class Triangle : MonoBehaviour
 
         GetTriangleList();
 
-        _exerciseHandler.EstablishedCurrentExercise += SetSides;
-        _exerciseHandler.EstablishedCurrentExercise += SetTriangleSprite;
-        _exerciseHandler.EstablishedCurrentExercise += SetRuler;
+        ExerciseHandler.EstablishedCurrentExercise += SetSides;
+        ExerciseHandler.EstablishedCurrentExercise += SetTriangleSprite;
+        ExerciseHandler.EstablishedCurrentExercise += SetRuler;
 
         _formulaHandler.ChoosingVariable += CallActiveSideButtons;
     }
@@ -46,7 +44,7 @@ public class Triangle : MonoBehaviour
     {
         foreach (TriangleType triangleType in _triangleTypeList)
         {
-            string charIndex = _exerciseHandler.CurrentExercise.triangleID[0].ToString();
+            string charIndex = ExerciseHandler.CurrentExercise.triangleID[0].ToString();
             int.TryParse(charIndex, out int currentIndex);
 
             if (triangleType.index == currentIndex)
@@ -74,9 +72,9 @@ public class Triangle : MonoBehaviour
                 foreach (TriangleSide triangleSide in _triangleSides)
                 {
                     triangleSide.SetPosition(triangleType.sideImages[i].xPosition, triangleType.sideImages[i].yPosition);
-                    triangleSide.SetValue(_exerciseHandler.CurrentExercise.sides[ii].variable, _exerciseHandler.CurrentExercise.sides[ii].value);
+                    triangleSide.SetValue(ExerciseHandler.CurrentExercise.sides[ii].variable, ExerciseHandler.CurrentExercise.sides[ii].value);
 
-                    if(triangleSide.gameObject.name.Split('_')[1] == _exerciseHandler.CurrentExercise.height.baseSide.ToString())
+                    if(triangleSide.gameObject.name.Split('_')[1] == ExerciseHandler.CurrentExercise.height.baseSide.ToString())
                     {
                         triangleSide.IsBaseSide = true;
                     }
@@ -99,7 +97,7 @@ public class Triangle : MonoBehaviour
     {
         foreach (Sprite sprite in _triangleSprites)
         {
-            if (sprite.name == _exerciseHandler.CurrentExercise.triangleID)
+            if (sprite.name == ExerciseHandler.CurrentExercise.triangleID)
             {
                 _triangleImage.sprite = sprite;       
             }
@@ -110,7 +108,7 @@ public class Triangle : MonoBehaviour
     {
         foreach (TriangleType triangleType in _triangleTypeList)
         {
-            string charIndex = _exerciseHandler.CurrentExercise.triangleID[0].ToString();
+            string charIndex = ExerciseHandler.CurrentExercise.triangleID[0].ToString();
             int.TryParse(charIndex, out int currentIndex);
 
             if (triangleType.index == currentIndex)

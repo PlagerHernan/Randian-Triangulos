@@ -7,7 +7,6 @@ using System.Linq;
 public class FormulaHandler : MonoBehaviour
 {
     GameManager _game;
-    ExerciseHandler _exerciseHandler;
     FormulaView _formulaView;
     UIPointsOfReference _UIPointsOfReference;
     FormulaButton _formulaButton;
@@ -28,7 +27,6 @@ public class FormulaHandler : MonoBehaviour
     void Awake() 
     {
         _game = FindObjectOfType<GameManager>();
-        _exerciseHandler = FindObjectOfType<ExerciseHandler>();
         _formulaView = GetComponentInChildren<FormulaView>();    
         _UIPointsOfReference = GetComponentInChildren<UIPointsOfReference>();
         _formulaButton = GetComponentInChildren<FormulaButton>();
@@ -43,7 +41,7 @@ public class FormulaHandler : MonoBehaviour
             gameObject.AddComponent<SwipeDetector>();
         }
 
-        _exerciseHandler.EstablishedCurrentExercise += SetFormulas;
+        ExerciseHandler.EstablishedCurrentExercise += SetFormulas;
     }
 
     void Start()
@@ -57,17 +55,17 @@ public class FormulaHandler : MonoBehaviour
         //si aún no se despejaron (1ra vez que entra)
         if (!_currentFormulasAreClear)
         {
-            _correctClearFormula = _exerciseHandler.CurrentExercise.clearFormulas[0].equation;
+            _correctClearFormula = ExerciseHandler.CurrentExercise.clearFormulas[0].equation;
 
             //si hay no despejadas en excel
-            if (_exerciseHandler.CurrentExercise.unclearFormulas != null)
+            if (ExerciseHandler.CurrentExercise.unclearFormulas != null)
             {
-                _currentFormulas = _exerciseHandler.CurrentExercise.unclearFormulas;
+                _currentFormulas = ExerciseHandler.CurrentExercise.unclearFormulas;
             }
             //si solo hay despejadas
             else
             {
-                _currentFormulas = _exerciseHandler.CurrentExercise.clearFormulas;
+                _currentFormulas = ExerciseHandler.CurrentExercise.clearFormulas;
                 _currentFormulasAreClear = true;
             }   
 
@@ -174,7 +172,7 @@ public class FormulaHandler : MonoBehaviour
             //si las fórmulas no estaban despejadas, las despeja
             else
             {
-                _currentFormulas = _exerciseHandler.CurrentExercise.clearFormulas;
+                _currentFormulas = ExerciseHandler.CurrentExercise.clearFormulas;
                 _currentFormulasAreClear = true;
                 //SetFormulas();
                 ChosenCorrectUnclearFormula?.Invoke();
@@ -213,9 +211,9 @@ public class FormulaHandler : MonoBehaviour
 
     bool SetNextEquationStep()
     {
-        if (_equationStepsCount < _exerciseHandler.CurrentExercise.equationSteps.Count)
+        if (_equationStepsCount < ExerciseHandler.CurrentExercise.equationSteps.Count)
         {
-            _currentEquationStep = _exerciseHandler.CurrentExercise.equationSteps[_equationStepsCount];
+            _currentEquationStep = ExerciseHandler.CurrentExercise.equationSteps[_equationStepsCount];
             _equationStepsCount++;
             return true;
         }
