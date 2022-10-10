@@ -41,6 +41,8 @@ public class FormulaTerms : MonoBehaviour
             }
         }
 
+        ExerciseHandler.EstablishedCurrentExercise += CleanEquationStepTexts;
+
         _formulaHandler.ChosenCorrectClearFormula += SetTerms;
         _formulaHandler.ChoosingVariable += UnderlineTerm; 
         _formulaHandler.ShowingNextEquationStep += SetEquationStepText;
@@ -185,7 +187,6 @@ public class FormulaTerms : MonoBehaviour
 
         StartCoroutine(_fadeText.FadeOut(_equationPreviousStepText, true));
 
-        //crea nuevo texto con el actual paso de la ecuación
         GameObject newText = Instantiate(_equationPreviousStepText.gameObject, _equationPreviousStepText.transform.position, new Quaternion(), transform);
         RectTransform rectTranNewText = newText.GetComponent<RectTransform>();
         rectTranNewText.anchoredPosition = new Vector2(rectTranNewText.anchoredPosition.x, rectTranNewText.anchoredPosition.y + 60f);
@@ -212,15 +213,6 @@ public class FormulaTerms : MonoBehaviour
         _termsAreClean = true;
     }
 
-    /* void CleanEquationStepTexts()
-    {
-        Text[] texts = GetComponentsInChildren<Text>();
-        foreach (Text text in texts)
-        {
-            Destroy(text.gameObject);
-        }
-    } */
-
     Text CreateEquationStepText()
     {
         GameObject newText = Instantiate(_prefabTerm, transform.position, new Quaternion(), transform);
@@ -234,6 +226,15 @@ public class FormulaTerms : MonoBehaviour
         _equationPreviousStepText.rectTransform.localPosition = Vector3.zero;
 
         return _equationPreviousStepText;
+    }
+
+    void CleanEquationStepTexts()
+    {
+        Text[] texts = GetComponentsInChildren<Text>();
+        foreach (Text text in texts)
+        {
+            Destroy(text.gameObject);
+        }
     }
 }
 

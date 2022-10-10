@@ -26,6 +26,8 @@ public class FormulaSheet : MonoBehaviour
                 _sheet = image.gameObject.GetComponent<RectTransform>();
             }
         }
+
+        ExerciseHandler.EstablishedCurrentExercise += RollUp;
     }
 
     void Start()
@@ -104,6 +106,15 @@ public class FormulaSheet : MonoBehaviour
     void CallOnChoosingVariable()
     {
         _formulaHandler.OnChoosingVariable();
+    }
+
+    void RollUp()
+    {
+        if (ExerciseHandler.CurrentExercise.id != 0)
+        {
+            _animator.SetTrigger("rollUp");
+            _animator.enabled = true;   
+        }
     }
 
     /* void Hide()
