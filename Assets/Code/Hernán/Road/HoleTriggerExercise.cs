@@ -55,9 +55,9 @@ public class HoleTriggerExercise : MonoBehaviour
         
         yield return new WaitForSeconds(0.5f);
 
-        TriangleCanvas.Show();
-
         ExerciseHandler.SetCurrentExercise();
+
+        TriangleCanvas.Show();
 
         _formulaHandler = FindObjectOfType<FormulaHandler>();
         _formulaHandler.CompletedEquationSteps += OnTriangleCompleted;

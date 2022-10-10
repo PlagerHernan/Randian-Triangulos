@@ -47,6 +47,6 @@ TagManager:
   - name: Triangle Canvas
     uniqueID: 4270465045
     locked: 0
-  - name: Line Canvas
+  - name: Game Canvas
     uniqueID: 2018711651
     locked: 0

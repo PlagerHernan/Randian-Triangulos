@@ -64,7 +64,7 @@ public class FormulaTerms : MonoBehaviour
         //recorre cada char de la formula correcta
         for (int i = 0; i < _correctFormula.Length; i++)
         {
-            //crea instancia de prefab (objeto simple con componente texto) 
+            //crea instancia de prefab
             GameObject termObj = Instantiate(_prefabTerm, transform.position, new Quaternion(), transform);
             termObj.transform.position = Vector3.zero;
 
@@ -195,29 +195,45 @@ public class FormulaTerms : MonoBehaviour
         _equationPreviousStepText = newText.GetComponent<Text>();
     }
 
-    public void CleanTerms()
+    void CleanTerms()
     {
+        _pencil.transform.SetParent(transform);
+        _highlight.transform.SetParent(transform);
+
         Text[] terms = GetComponentsInChildren<Text>();
-
-        _equationPreviousStepText = terms[0];
-        _equationPreviousStepText.gameObject.name = "StepEquation";
-        LetterSpacing letterSpacing = _equationPreviousStepText.gameObject.AddComponent<LetterSpacing>();
-        letterSpacing.spacing = 5f;
-
-        //destruye todos los textos excepto el 1ro
-        for (int i = 0; i < terms.Length; i++)
+        _equationPreviousStepText = CreateEquationStepText();
+        _equationPreviousStepText.text = "";
+        foreach (Text term in terms)
         {
-            if (i != 0)
-            {
-                _equationPreviousStepText.text += terms[i].text;
-                Destroy(terms[i].gameObject);
-            }
+            _equationPreviousStepText.text += term.text;
+            Destroy(term.gameObject);
         }
 
+        _termsAreClean = true;
+    }
+
+    /* void CleanEquationStepTexts()
+    {
+        Text[] texts = GetComponentsInChildren<Text>();
+        foreach (Text text in texts)
+        {
+            Destroy(text.gameObject);
+        }
+    } */
+
+    Text CreateEquationStepText()
+    {
+        GameObject newText = Instantiate(_prefabTerm, transform.position, new Quaternion(), transform);
+        newText.name = "EquationStep";
+        
+        LetterSpacing letterSpacing = newText.AddComponent<LetterSpacing>();
+        letterSpacing.spacing = 5f;
         GetComponent<HorizontalLayoutGroup>().enabled = false;
+
+        _equationPreviousStepText = newText.GetComponent<Text>();
         _equationPreviousStepText.rectTransform.localPosition = Vector3.zero;
 
-        _termsAreClean = true;
+        return _equationPreviousStepText;
     }
 }
 
