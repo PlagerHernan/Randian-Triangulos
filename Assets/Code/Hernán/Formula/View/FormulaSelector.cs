@@ -6,7 +6,8 @@ public class FormulaSelector : MonoBehaviour
 
     void Awake() 
     {
-        _formulaHandler = GetComponentInParent<FormulaHandler>();    
+        _formulaHandler = GetComponentInParent<FormulaHandler>();   
+        ExerciseHandler.EstablishedCurrentExercise += Show; 
     }
 
     void Start()

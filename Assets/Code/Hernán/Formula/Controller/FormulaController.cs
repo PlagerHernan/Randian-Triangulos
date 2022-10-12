@@ -12,6 +12,8 @@ public class FormulaController : MonoBehaviour
         _formulaHandler = GetComponent<FormulaHandler>();
         _roll = GetComponentInChildren<Roll>();
 
+        ExerciseHandler.EstablishedCurrentExercise += UnlockSides;
+
         GameManager.PausingGame += Disable;
         GameManager.PlayingGame += Enable;
         
@@ -31,7 +33,8 @@ public class FormulaController : MonoBehaviour
 
     void Disable()
     {
-        _disabled = true; 
+        LockDown();
+        LockSides();
     }
 
     void Enable()

@@ -41,6 +41,7 @@ public class FormulaHandler : MonoBehaviour
             gameObject.AddComponent<SwipeDetector>();
         }
 
+        ExerciseHandler.EstablishedCurrentExercise += SetInitialValues;
         ExerciseHandler.EstablishedCurrentExercise += SetFormulas;
     }
 
@@ -48,6 +49,11 @@ public class FormulaHandler : MonoBehaviour
     {
         this.ChosenCorrectUnclearFormula += SetFormulas;
         this.ChosenCorrectUnclearFormula += ShowNextFormula;
+    }
+
+    void SetInitialValues()
+    {
+        _currentFormulasAreClear = false;
     }
 
     void SetFormulas()
