@@ -28,12 +28,25 @@ public class FormulaSheet : MonoBehaviour
         }
 
         ExerciseHandler.EstablishedCurrentExercise += RollUp;
+        ExerciseHandler.EstablishedCurrentExercise += MoveBack;
     }
 
     void Start()
     {
         _formulaHandler.ChosenCorrectClearFormula += Unroll;
         _formulaHandler.ShowingNextEquationStep += UnrollMore;
+    }
+
+    void MoveForward()
+    {
+        //se muestra por delante
+        transform.SetSiblingIndex(2);
+    }
+
+    void MoveBack()
+    {
+        //se muestra por detrás
+        transform.SetSiblingIndex(1);
     }
 
     void Unroll()
@@ -48,7 +61,7 @@ public class FormulaSheet : MonoBehaviour
             yield return null;
         }
 
-        Show();
+        MoveForward();
         AudioHandler.PlaySound("UnrollSheet");
         _animator.SetTrigger("unroll");
         Invoke("CallOnChoosingVariable", 3f);
@@ -93,15 +106,6 @@ public class FormulaSheet : MonoBehaviour
         _isUnrollingMore = false;
     }
 
-    void Show()
-    {
-        //se muestra por delante
-        transform.SetSiblingIndex(2);
-
-        //se activa
-        //transform.GetChild(0).gameObject.SetActive(true);
-    }
-
     //llamado desde UnrollC
     void CallOnChoosingVariable()
     {
@@ -116,10 +120,4 @@ public class FormulaSheet : MonoBehaviour
             _animator.enabled = true;   
         }
     }
-
-    /* void Hide()
-    {
-        //se muestra por detrás
-        transform.SetSiblingIndex(1);
-    } */
 }

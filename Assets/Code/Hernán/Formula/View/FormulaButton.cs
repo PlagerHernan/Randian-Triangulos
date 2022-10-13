@@ -24,13 +24,15 @@ public class FormulaButton : MonoBehaviour
         _formulaHandler.ChosenCorrectClearFormula += CorrectChoice;
     }
     
-    public void Show()
+    public void Activate()
     {
+        print("Activate");
         gameObject.SetActive(true);
     }
 
-    public void Hide()
+    public void Deactivate()
     {
+        print("Deactivate");
         gameObject.SetActive(false);
     }
 

@@ -28,7 +28,7 @@ public class FormulaView : MonoBehaviour
     {
         AudioHandler.PlaySound("ChangeFormula");
         
-        _formulaButton.Hide();
+        _formulaButton.Deactivate();
 
         //al moverse hacia la izquierda, pasa al frente la imagen derecha
         if (side == "left")
@@ -58,6 +58,6 @@ public class FormulaView : MonoBehaviour
     //llamado desde animación formulaMenu
     void ActivateButton()
     {
-        _formulaButton.Show();
+        _formulaButton.Activate();
     }
 }
