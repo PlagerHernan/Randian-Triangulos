@@ -8,6 +8,7 @@ public class FormulaTerms : MonoBehaviour
     FadeText _fadeText;
 
     Animator _animator;
+    HorizontalLayoutGroup _horizontalLayoutGroup;
     Image _pencil, _highlight;
 
     [SerializeField] GameObject _prefabTerm, _starParticle;
@@ -16,7 +17,7 @@ public class FormulaTerms : MonoBehaviour
     List<Term> _termsToReplace;
     const string _charactersToReplace = "abcdehP";
     string _variablesToReplace;
-    int _termsToReplaceCount = -1;
+    int _termsToReplaceCount;
     char _currentUnderlinedTerm; public char CurrentUnderlinedTerm { get => _currentUnderlinedTerm; }
     Vector3 _highlightStartPosition, _pencilStartPosition;
     bool _termsAreClean;
@@ -28,6 +29,7 @@ public class FormulaTerms : MonoBehaviour
         _fadeText = GetComponentInParent<FadeText>();
 
         _animator = GetComponent<Animator>();
+        _horizontalLayoutGroup = GetComponent<HorizontalLayoutGroup>();
         Image[] images = GetComponentsInChildren<Image>();
         foreach (Image image in images)
         {
@@ -41,7 +43,7 @@ public class FormulaTerms : MonoBehaviour
             }
         }
 
-        ExerciseHandler.EstablishedCurrentExercise += CleanEquationStepTexts;
+        ExerciseHandler.EstablishedCurrentExercise += SetInitialValues;
 
         _formulaHandler.ChosenCorrectClearFormula += SetTerms;
         _formulaHandler.ChoosingVariable += UnderlineTerm; 
@@ -57,10 +59,27 @@ public class FormulaTerms : MonoBehaviour
         _highlight.enabled = false;
     }
 
+    void SetInitialValues()
+    {
+        //borra textos (EquationStepTexts), si los hubiera
+        Text[] texts = GetComponentsInChildren<Text>();
+        foreach (Text text in texts)
+        {
+            Destroy(text.gameObject);
+        }
+
+        _horizontalLayoutGroup.enabled = true;
+
+        _termsToReplaceCount = -1;
+
+        _variablesToReplace = "";
+    }
+
     void SetTerms()
     {
         _correctFormula = _formulaHandler.CorrectClearFormula;
 
+        _termsToReplace = null;
         _termsToReplace = new List<Term>();
 
         //recorre cada char de la formula correcta
@@ -220,21 +239,12 @@ public class FormulaTerms : MonoBehaviour
         
         LetterSpacing letterSpacing = newText.AddComponent<LetterSpacing>();
         letterSpacing.spacing = 5f;
-        GetComponent<HorizontalLayoutGroup>().enabled = false;
+        _horizontalLayoutGroup.enabled = false;
 
         _equationPreviousStepText = newText.GetComponent<Text>();
         _equationPreviousStepText.rectTransform.localPosition = Vector3.zero;
 
         return _equationPreviousStepText;
-    }
-
-    void CleanEquationStepTexts()
-    {
-        Text[] texts = GetComponentsInChildren<Text>();
-        foreach (Text text in texts)
-        {
-            Destroy(text.gameObject);
-        }
     }
 }
 

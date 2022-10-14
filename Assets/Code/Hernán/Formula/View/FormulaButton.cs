@@ -26,13 +26,11 @@ public class FormulaButton : MonoBehaviour
     
     public void Activate()
     {
-        print("Activate");
         gameObject.SetActive(true);
     }
 
     public void Deactivate()
     {
-        print("Deactivate");
         gameObject.SetActive(false);
     }
 

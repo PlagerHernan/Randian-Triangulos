@@ -57,6 +57,7 @@ public class TriangleData : MonoBehaviour
 
     void SetValue(Type type)
     {
+        _isAlreadySelected = false;
         char unknownVariable = 'x';
 
         if (type == Type.Area)

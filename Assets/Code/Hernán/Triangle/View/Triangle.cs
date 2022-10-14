@@ -53,6 +53,10 @@ public class Triangle : MonoBehaviour
                 {
                     _isIsosceles = true;
                 }
+                else
+                {
+                    _isIsosceles = false;
+                }
 
                 int i = 0;
                 int ii;

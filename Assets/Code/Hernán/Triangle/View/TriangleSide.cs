@@ -43,8 +43,11 @@ public class TriangleSide : MonoBehaviour
 
     public void SetValue(char variableLetter, float valueNumber)
     {
+        _isAlreadySelected = false;
+
         if (_button != null)
         {
+            _button.onClick.RemoveAllListeners();
             DeactivateButton();
         }
 
