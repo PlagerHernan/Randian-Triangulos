@@ -54,6 +54,8 @@ public class FormulaHandler : MonoBehaviour
     void SetInitialValues()
     {
         _currentFormulasAreClear = false;
+        _currentFormulas?.Clear();
+        _centeredCurrentFormulaIndex = 0;
     }
 
     void SetFormulas()

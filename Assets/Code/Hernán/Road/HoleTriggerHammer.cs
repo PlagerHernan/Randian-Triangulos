@@ -53,6 +53,12 @@ public class HoleTriggerHammer : MonoBehaviour
 
         //cada click o tap le agrega un sexto de opacidad
         _alpha += 0.17f;
+
+        if (Application.isEditor)
+        {
+            _alpha = 1f;
+        }
+
         _tilemap.color = new Color(_tilemap.color.r, _tilemap.color.g, _tilemap.color.b, _alpha);
 
         _touchCount++;
@@ -62,7 +68,7 @@ public class HoleTriggerHammer : MonoBehaviour
         }
 
         //si terminó la recontrucción
-        if (_alpha > 1f)
+        if (_alpha >= 1f)
         {
             StarParticle.Create();
             _holeTriggerExercise.OnTriangleExit();

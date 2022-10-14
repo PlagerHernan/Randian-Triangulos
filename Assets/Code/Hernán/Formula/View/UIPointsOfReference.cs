@@ -9,11 +9,13 @@ public class UIPointsOfReference : MonoBehaviour
     void Awake() 
     {
         _points = GetComponentsInChildren<Image>();
+
+        ExerciseHandler.EstablishedCurrentExercise += SetInitialValue;
     }
 
-    void Start() 
+    void SetInitialValue()
     {
-        SetCurrentPoint(0);    
+        SetCurrentPoint(0);
     }
 
     public void SetCurrentPoint(int currentFormula)
