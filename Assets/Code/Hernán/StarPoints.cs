@@ -10,7 +10,7 @@ public class StarPoints : MonoBehaviour
     RectTransform _rectTransform;
     Image _shineImage;
 
-    float _brightness; public float Brightness { set => _brightness = value; }
+    float _brightness; //public float Brightness { set => _brightness = value; }
     static bool _increasingShine; public static bool IncreasingShine { get => _increasingShine; } 
 
     void Awake() 
@@ -29,14 +29,13 @@ public class StarPoints : MonoBehaviour
             }
         } 
 
+        ExerciseHandler.EstablishedCurrentExercise += SetInitialValues;
         _formulaHandler.CompletedEquationSteps += IncreaseShine;
-
-        _increasingShine = true;
     }
 
-    void Start() 
+    void SetInitialValues()
     {
-        _shineImage.color = new Color(1f, 1f, 1f, _brightness); 
+        _increasingShine = true;
     }
 
     void IncreaseShine()
@@ -62,15 +61,14 @@ public class StarPoints : MonoBehaviour
 
         //Aumenta opacidad
         float targetAlpha = ScoreHandler.Score; 
-        float currentAlpha = _brightness;
 
-        float difference = targetAlpha - currentAlpha;
+        float difference = targetAlpha - _brightness;
         float gradualIncrease = difference * 0.01f;
 
-        while (currentAlpha < targetAlpha)
+        while (_brightness < targetAlpha)
         {
-            currentAlpha = currentAlpha + gradualIncrease;
-            _shineImage.color = new Color(1f, 1f, 1f, currentAlpha); 
+            _brightness = _brightness + gradualIncrease;
+            _shineImage.color = new Color(1f, 1f, 1f, _brightness); 
             yield return new WaitForSeconds(0.02f); 
         } 
 

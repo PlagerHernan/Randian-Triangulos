@@ -69,10 +69,9 @@ public class FormulaTerms : MonoBehaviour
         }
 
         _horizontalLayoutGroup.enabled = true;
-
         _termsToReplaceCount = -1;
-
         _variablesToReplace = "";
+        _termsAreClean = false;
     }
 
     void SetTerms()
