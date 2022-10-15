@@ -22,22 +22,25 @@ public class Tab : MonoBehaviour, IPointerClickHandler
         _pasiveColor = new Color(_image.color.r, _image.color.g, _image.color.b, 0.6f);
         _activeColor = Color.white;
 
-        ExerciseHandler.EstablishedCurrentExercise += SetLocked;
+        ExerciseHandler.EstablishedCurrentExercise += SetInitialValues;
     }
 
-    void Start()
+    void SetInitialValues()
     {
+        SetBlocking();
         Deactivate();
+        _on = false;
     }
 
-    void SetLocked()
+    void SetBlocking()
     {
-        if (_dataType == TriangleData.Type.Height || _dataType == TriangleData.Type.Area)
+        if ((_dataType == TriangleData.Type.Height || _dataType == TriangleData.Type.Area) && ExerciseHandler.CurrentExercise.height.value == 0f)
         {
-            if (ExerciseHandler.CurrentExercise.height.value == 0f)
-            {
-                _locked = true;   
-            }
+            _locked = true;
+        }
+        else
+        {
+            _locked = false;
         }
     }
 
