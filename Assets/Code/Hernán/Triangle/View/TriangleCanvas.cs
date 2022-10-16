@@ -1,41 +1,33 @@
 ﻿using UnityEngine;
+using System.Collections;
 
 public class TriangleCanvas : MonoBehaviour
 {
-    //static Object prefab;
     static Canvas _canvas;
     static GameObject _blockingCover; 
-
-    /* public static TriangleCanvas Create(float StarPointsShine)
-    {
-        //DestroyOldCanvas();
-
-        prefab = Resources.Load("TriangleCanvas");
-        GameObject newObject = Instantiate(prefab) as GameObject;
-
-        newObject.GetComponentInChildren<StarPoints>().Brightness = StarPointsShine;
-
-        TriangleCanvas triCanvasObject = newObject.GetComponent<TriangleCanvas>();
-        return triCanvasObject;
-    } */
+    static TriangleCanvas _thisScript;
 
     void Awake() 
     {
         _canvas = GetComponent<Canvas>();
         _blockingCover = transform.GetChild(transform.childCount-1).gameObject; 
+        _thisScript = this;
     }
 
     void Start() 
     {
         Hide();
         DeactivateBlockingCover();
-
-        //Invoke("CallTutorial", 1f);
     }
 
     public static void Show()
     {
         _canvas.enabled = true;
+
+        if (ExerciseHandler.CurrentExercise.id == 0)
+        {
+            _thisScript.StartCoroutine(CallTutorial());
+        }
     }
 
     public static void Hide()
@@ -58,18 +50,10 @@ public class TriangleCanvas : MonoBehaviour
         _blockingCover.SetActive(false);
     }
 
-    //llamado en Start()
-    /* void CallTutorial()
+    static IEnumerator CallTutorial()
     {
-        HelpIinfo.Show(HelpIinfo.NextAction.chooseCorrectUnclearFormula);
-    } */
+        yield return new WaitForSeconds(1f);
 
-    /* static void DestroyOldCanvas()
-    {
-        TriangleCanvas oldCanvas = FindObjectOfType<TriangleCanvas>();
-        if (oldCanvas != null)
-        {
-            Destroy(oldCanvas.gameObject);
-        }
-    } */
+        HelpIinfo.Show(HelpIinfo.NextAction.chooseCorrectUnclearFormula);
+    }
 }

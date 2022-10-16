@@ -33,8 +33,7 @@ public class FormulaController : MonoBehaviour
 
     void Disable()
     {
-        LockDown();
-        LockSides();
+        _disabled = true;
     }
 
     void Enable()
