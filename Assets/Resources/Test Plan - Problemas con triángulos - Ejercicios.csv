@@ -1,6 +1,6 @@
 ,,,,SET 1 ,,,SET 2,,,,,,izquierdo (A),derecho (B),inferior (C),
 ID Ejercicio,Nivel,ID Triángulo,Altura (h),Fórmula correcta no despejada,Fórmula incorrecta 1,Fórmula incorrecta 2,Fórmula correcta despejada,Fórmula incorrecta 1,Fórmula incorrecta 2,Paso 1,Paso 2,Paso 3,Lado i1 (igual en isósceles),Lado i2 (igual en isósceles),Lado d (distinto en isósceles),Acciones pedagogicas
-0,0,7a,2_A,-,-,-,A=(b.h)/2,A=(b+h).2,A=b.h.2,A=8/2,A=4,-,4,"2,3","5,5",3
+3,1,7a,2_A,-,-,-,A=(b.h)/2,A=(b+h).2,A=b.h.2,A=8/2,A=4,-,4,"2,3","5,5",3
 1,0,1a,"3,5_A",-,-,-,A=(b.h)/2,A=2b+h,A=b/(h+2),A=14/2,A=7,-,4,?_4,?_4,3
-2,0,7d,-,P=a+b+c,P=a-b+c,P=2a+b,x=P-a-b,x=x-a-b,x=(a+b).P,"x=10,5-4","x=6,5",-,3,4,"x_6,5",4
-3,1,2a,-,-,-,-,P=2a+b,P=3a,P=2a-b,P=8+2,P=10,-,4,4,2,3
+0,0,7d,-,P=a+b+c,P=a-b+c,P=2a+b,x=P-a-b,x=x-a-b,x=(a+b).P,"x=10,5-4","x=6,5",-,3,4,"x_6,5",4
+2,0,2a,-,-,-,-,P=2a+b,P=3a,P=2a-b,P=8+2,P=10,-,4,4,2,3

@@ -6,6 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/herniScene.unity
+    path: Assets/Scenes/MainScene.unity
     guid: f0f2ded6e6bdf3d4a9c4d358e9db7582
   m_configObjects: {}
