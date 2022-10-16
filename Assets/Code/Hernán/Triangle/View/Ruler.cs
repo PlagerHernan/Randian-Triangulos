@@ -28,5 +28,9 @@ public class Ruler : MonoBehaviour
         {
             _imageComponent.fillAmount = 0.5f;   
         }
+        else
+        {
+            _imageComponent.fillAmount = 1f; 
+        }
     }
 }

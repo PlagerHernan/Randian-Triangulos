@@ -43,6 +43,7 @@ public class TriangleSide : MonoBehaviour
 
     public void SetValue(char variableLetter, float valueNumber)
     {
+        gameObject.SetActive(true);
         _isAlreadySelected = false;
 
         if (_button != null)
@@ -63,7 +64,7 @@ public class TriangleSide : MonoBehaviour
         }
         else if (_variable == '?')
         {
-            _imageComponent.enabled = false;
+            gameObject.SetActive(false);
 
             _button = null;
         }
