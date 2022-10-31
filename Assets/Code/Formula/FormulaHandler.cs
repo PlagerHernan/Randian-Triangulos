@@ -31,14 +31,14 @@ public class FormulaHandler : MonoBehaviour
         _UIPointsOfReference = GetComponentInChildren<UIPointsOfReference>();
         _formulaButton = GetComponentInChildren<FormulaButton>();
 
-        if (Application.isEditor)
-        {
-            gameObject.AddComponent<FormulaPCController>();   
-        }
-        else
+        if (Application.isMobilePlatform)
         {
             gameObject.AddComponent<FormulaAndroidController>();
             gameObject.AddComponent<SwipeDetector>();
+        }
+        else
+        {
+            gameObject.AddComponent<FormulaPCController>(); 
         }
 
         ExerciseHandler.EstablishedCurrentExercise += SetInitialValues;
